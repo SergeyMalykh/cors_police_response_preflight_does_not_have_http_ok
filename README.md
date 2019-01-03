@@ -4,6 +4,23 @@ This error hapens when I add a "Authorization" token ou basic at the request hea
 
 I can't undestand why.
 
+I add the cors police header at the server, but it doesnt send the header to the server anyway...
+
+file: app.js
+```javascript 
+//(...)
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, access-control-request-headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, authorization, Access-Control-Allow-Credentials, X-Auth-Token, X-Accept-Charset,X-Accept");
+  //res.header("Access-Control-Allow-Headers", "*");
+  
+  //res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+//(...)
+```
 
 # TEST TO DEMONSTRATE DE PROBLEM TO MAKE A AUTENTICATION WITH AUTORIZATION
 
