@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "new": "node dev-server.js",
+    "dev": "set NODE_ENV=development&& nodemon -e js,ejs --ignore '../frontend/*' --inspect app.js ",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@sentry/node": "^4.4.2",
+    "app-module-path": "^2.2.0",
+    "chokidar": "^2.0.4",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.4.0",
+    "mercadolibre": "^0.0.13",
+    "morgan": "~1.9.0",
+    "node-firebird": "^0.8.6",
+    "node-json-db": "^0.9.2",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "schm": "^0.4.1",
+    "webpack": "^4.28.3",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@app": "app",
+    "@controllers": "app/controllers",
+    "@model": "app/models",
+    "@middlewares": "middlewares"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

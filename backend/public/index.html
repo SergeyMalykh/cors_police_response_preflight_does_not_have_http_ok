@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST in the same PORT : 3000</title>
+  </head>
+  <body> 
+    <h1>TEST in the same SERVER (localhost:3000)</h1>
+    <p>When run this, they will get the data from the server, if you run from the localhost:8080, u will get the error...</p>
+    <button onClick="getAxiosJavascriptData();">Get data from the same server</button>
+    <pre id=response></pre>  
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script>
+    function getAxiosJavascriptData() {
+
+      console.log("Loading DATA!!! ");
+      document.getElementById("response").innerHTML = 'Loading data!';
+      // 
+      var token = 'FAKE-TOKEN-JUST-A-TEST';
+
+      return axios.get('http://localhost:3000/api/products', {headers : { authorization: `Bearer ${token}` } }).then(data => {
+        console.log('data loaded', data);
+        document.getElementById("response").innerHTML = 'Data Loaded! <br>' + JSON.stringify(data);
+      }).catch(err => {
+        console.log('Error loading Data', err);
+        document.getElementById("response").innerHTML = 'Error Loading Data! <br>' + err;
+      });
+    }
+  </script>
+</html>
