@@ -1,7 +1,7 @@
 require('app-module-path').addPath(`${__dirname}`);
 var express = require('express');
 var path = require('path');
-var cors = require('cors')
+var cors = require('cors');
 
 console.log('NODE_ENV = ' + process.env.NODE_ENV);
 
