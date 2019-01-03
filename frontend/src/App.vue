@@ -24,8 +24,29 @@ export default {
       
       // 
       var token = 'FAKE-TOKEN-JUST-A-TEST';
+      
+      //axios.defaults.withCredentials = true;
+      //axios.defaults.headers = { 'Content-Type': 'application/x-www-form-urlencoded'};
+      /*const http = axios.create ({
+        baseURL: process.env.VUE_APP_ROOT_API,
+        timeout: 1000,
+        withCredentials: true,
+        headers: {'Content-Type': 'application/json'},
+      });*/
 
-      axios.get('http://localhost:3000/api/products', {headers : { authorization: `Bearer ${token}` } }).then(data => {
+      /*
+      http.interceptors.request.use (
+        function (config) {
+          if (token) config.headers.Authorization = `Bearer ${token}`;
+          return config;
+        },
+        function (error) {
+          return Promise.reject (error);
+        }
+      );      
+      */
+
+      axios.get('http://localhost:3000/api/products', {headers : {'Content-Type': 'application/x-www-form-urlencoded',  authorization: `Bearer ${token}` } }).then(data => {
         console.log('data loaded');
         this.msg = data;
       }).catch(err => {
