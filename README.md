@@ -4,6 +4,10 @@ This error hapens when I add a "Authorization" token ou basic at the request hea
 
 I can't undestand why.
 
+### Video example:
+
+![](testCors.gif)
+
 I add the cors police header at the server, but it doesnt send the header to the server anyway...
 
 file: app.js
