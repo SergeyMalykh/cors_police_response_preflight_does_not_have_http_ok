@@ -1,4 +1,11 @@
-# JUST A TEST TO DEMONSTRATE DE PROBLEM TO MAKE A AUTENTICATION WITH AUTORIZATION
+# ERROR: Access to XMLHttpRequest at 'http://localhost:3000/api/products' from origin 'http://localhost:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: It does not have HTTP ok status.
+
+This error hapens when I add a "Authorization" token ou basic at the request header from browser to client, developing with webpack with hotreload etc.  
+
+I can't undestand why.
+
+
+# TEST TO DEMONSTRATE DE PROBLEM TO MAKE A AUTENTICATION WITH AUTORIZATION
 
 ## TO INSTALL
 
